@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Message box with counter - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <style type="text/css">
+    body{padding-top:20px;}    </style>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+	<div class="container">
+    <div class="row">
+		<div class="col-sm-4 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">                
+                    <form accept-charset="UTF-8" action="" method="POST">
+                        <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;"></textarea>
+                        <h6 class="pull-right" id="counter">320 characters remaining</h6>
+                        <button class="btn btn-info" type="submit">Post New Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>	<script type="text/javascript">
+	/**
+ *
+ * jquery.charcounter.js version 1.2
+ * requires jQuery version 1.2 or higher
+ * Copyright (c) 2007 Tom Deater (http://www.tomdeater.com)
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ */
+ 
+$(function() {
+    $(".counted").charCounter(320,{container: "#counter"});
+});
+	</script>
+</body>
+</html>
