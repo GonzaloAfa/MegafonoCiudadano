@@ -3,47 +3,178 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Message box with counter - Bootsnipp.com</title>
+    <title>Propón tu "Pregunta del día"</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/comment.css" rel="stylesheet" id="comment-css">
 
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
-    <style type="text/css">
-    body{padding-top:20px;}    </style>
-
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     
 </head>
 <body>
-	<div class="container">
-    <div class="row">
-		<div class="col-sm-4 col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">                
-                    <form accept-charset="UTF-8" action="" method="POST">
-                        <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;"></textarea>
-                        <h6 class="pull-right" id="counter">320 characters remaining</h6>
-                        <button class="btn btn-info" type="submit">Post New Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-	</div>
-</div>	<script type="text/javascript">
-	/**
- *
- * jquery.charcounter.js version 1.2
- * requires jQuery version 1.2 or higher
- * Copyright (c) 2007 Tom Deater (http://www.tomdeater.com)
- * Licensed under the MIT License:
- * http://www.opensource.org/licenses/mit-license.php
- * 
- */
+
+<div class="container">
+
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+
+</div>
+
+
+
+<div class="col-xs-12 col-sm-9">
+
+    <div>
  
+
+        <h1 class="text-center">Propone tu "Pregunta del día"</h1>
+    </div>
+    Reglas:
+    <ul>
+        <li>Tu pregunta debe ser de máximo 320 caracteres</li>
+        <li>No debe contener contenido ofensivo</li>
+        <li>La más votada del día se puede convertir en "La pregunta del día"</li>
+
+    </ul>
+
+    <br/>
+
+    <div class="row">
+        <div class="span4 well" style="padding-bottom:0">
+            <form accept-charset="UTF-8" action="" method="POST">
+                
+                <textarea class="form-control" id="new_message" name="new_message"
+                placeholder="Escribe tu opinión" rows="3"></textarea>
+
+                <h6 class="pull-right" id="counter">320 carácteres disponibles</h6>
+                <br/>
+
+                <p><button class="btn btn-info" type="submit">Envianos tu pregunta</button></p>
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript">
+
 $(function() {
     $(".counted").charCounter(320,{container: "#counter"});
 });
-	</script>
+</script>
+
+
+<ul class="nav nav-tabs">
+  <li><a href="#" data-toggle="tab">Preguntas Destacados</a></li>
+  <li class="active" data-toggle="tab"><a href="#">Preguntas propuestas<span class="badge">42</span></a></li>
+</ul>
+
+<script type="text/javascript">
+
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+
+
+    $('#myTab a[href="#profile"]').tab('show') // Select tab by name
+    $('#myTab a:first').tab('show') // Select first tab
+    $('#myTab a:last').tab('show') // Select last tab
+    $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
+
+</script>
+
+
+
+
+    <div class="row">
+        <div class="panel panel-default widget">
+            
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div class="mic-info">
+                                        By: <a href="#">Cristopher Andres Solis</a> on 10 May 2014, at 7:24pm
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Me parece genial por todos los que quisimos tomar un preu y no tuvimos las lucas para hacerlo, gracias a dios me fué bien en la PSU, ojalá esto se pudiera hacer en todo Chile.
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-success btn-xs" title="Aprobar">
+                                        <span class="glyphicon glyphicon-thumbs-up">10</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Desaprobar">
+                                        <span class="glyphicon glyphicon-thumbs-down">2</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div class="mic-info">
+                                        By: <a href="#">Angel Candia</a> on 11 May 2014, at 4:02pm
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Cuidado, que los PREU son la cara más sucia de un sistema de educación fracasado.
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-success btn-xs" title="Edit">
+                                        <span class="glyphicon glyphicon-thumbs-up">134</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Approved">
+                                        <span class="glyphicon glyphicon-thumbs-down">39</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div class="mic-info">
+                                        By: <a href="#">Fabian Garrido</a> on 11 May 2014, at 11:20 am
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                   No es el primero en hacerlo, (yo mismo participo en uno) ahora se deben dar cuenta que es una medida parche #NoMasPSU
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-success btn-xs" title="Edit">
+                                        <span class="glyphicon glyphicon-thumbs-up">102</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Approved">
+                                        <span class="glyphicon glyphicon-thumbs-down">23</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
 </body>
 </html>
+
