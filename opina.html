@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pregunta del día</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/comment.css" rel="stylesheet" id="comment-css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/count.js"></script>
+    
+</head>
+<body>
+
+ <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-bullhorn fa"></i> Megáfono ciudadano</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="perfil.html">  <i class="fa fa-info fa-fw"></i> Infórmate</a></li>
+                    <li><a href="opina.html">   <i class="fa fa-comments-o fa-fw"></i> Opina</a></li>
+                    <li><a href="propon.html"> <i class="fa fa-pencil-square-o fa-fw"></i>Propón</a></li>
+                    <li><a href="login.html">   <i class="fa fa-user fa-fw"></i>Ingresar</a></li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<br/>
+<br/>
+
+<div class="container">
+
+<div class="col-xs-12 col-sm-3 sidebar-offcanvas">
+
+    <center>
+        <img src="http://nodo.tropicson.cl/wp-content/uploads/2012/06/boric_director.jpg" name="aboutme" width="140"  border="0" class="img-circle"></a>
+        <h3 class="media-heading"><a href="perfil.html">Gabriel Boric</a> <br/>
+            <small> Diputado</small></h3>
+    </center>
+    <hr>
+    <center>
+        <p class="text-center">
+            Diputado por el distrito 60, que corresponde a Magallanes y la Antártica Chilena</p>
+    </center>
+
+</div>
+
+
+
+<div class="col-xs-12 col-sm-9">
+
+    <div>
+ 
+
+        <h1 class="text-center">¿Qué te parece que el diputado <a href="perfil.html">Gabriel Boric</a> haya abierto un preuniversitario gratuito en Magallanes, el cual será financiando por él mismo?</h1>
+    </div>
+    <br/>
+
+    <div class="row">
+        <div class="span4 well" style="padding-bottom:0">
+            <form accept-charset="UTF-8" action="" method="POST">
+                
+                <textarea class="form-control" id="new_message" name="new_message"
+                placeholder="Escribe tu opinión" rows="3"></textarea>
+
+                <h6 class="pull-right" id="counter">320 carácteres disponibles</h6>
+                <br/>
+
+                <p><button class="btn btn-info" type="submit">Envia tu opinión</button></p>
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript">
+
+$(function() {
+    $(".counted").charCounter(320,{container: "#counter"});
+});
+</script>
+
+
+<ul class="nav nav-tabs">
+  <li><a href="#" data-toggle="tab">Opiniones Destacados</a></li>
+  <li class="active" data-toggle="tab"><a href="#">Opiniones recientes <span class="badge">42</span></a></li>
+</ul>
+
+
+
+    <div class="row">
+        <div class="panel panel-default widget">
+            
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div class="mic-info">
+                                        By: <a href="#">Cristopher Andres Solis</a> on 10 May 2014, at 7:24pm
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Me parece genial por todos los que quisimos tomar un preu y no tuvimos las lucas para hacerlo, gracias a dios me fué bien en la PSU, ojalá esto se pudiera hacer en todo Chile.
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-success btn-xs" title="Aprobar">
+                                        <span class="glyphicon glyphicon-thumbs-up">10</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Desaprobar">
+                                        <span class="glyphicon glyphicon-thumbs-down">2</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div class="mic-info">
+                                        By: <a href="#">Angel Candia</a> on 11 May 2014, at 4:02pm
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Cuidado, que los PREU son la cara más sucia de un sistema de educación fracasado.
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-success btn-xs" title="Edit">
+                                        <span class="glyphicon glyphicon-thumbs-up">134</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Approved">
+                                        <span class="glyphicon glyphicon-thumbs-down">39</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div class="mic-info">
+                                        By: <a href="#">Fabian Garrido</a> on 11 May 2014, at 11:20 am
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                   No es el primero en hacerlo, (yo mismo participo en uno) ahora se deben dar cuenta que es una medida parche #NoMasPSU
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-success btn-xs" title="Edit">
+                                        <span class="glyphicon glyphicon-thumbs-up">102</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Approved">
+                                        <span class="glyphicon glyphicon-thumbs-down">23</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> Seguir cargando</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</body>
+</html>
+

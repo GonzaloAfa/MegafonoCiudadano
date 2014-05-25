@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Propone tu "Pregunta del día"</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/comment.css" rel="stylesheet" id="comment-css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+
+
+ <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-bullhorn fa"></i> Megáfono ciudadano</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="perfil.html">  <i class="fa fa-info fa-fw"></i> Infórmate</a></li>
+                    <li><a href="opina.html">   <i class="fa fa-comments-o fa-fw"></i> Opina</a></li>
+                    <li><a href="propon.html"> <i class="fa fa-pencil-square-o fa-fw"></i>Propón</a></li>
+                    <li><a href="login.html">   <i class="fa fa-user fa-fw"></i>Ingresar</a></li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<br/>
+<br/>
+
+
+<div class="container">
+
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+
+</div>
+
+
+
+<div class="col-xs-12 col-sm-9">
+
+    <div>
+ 
+
+        <h1 class="text-center">¿Quieres proponer la pregunta del día?</h1>
+    </div>
+    Reglas:
+    <ul>
+        <li>Deber ser dirigida a un Parlamentario/a o su bancada</li>
+        <li>Máximo 320 caracteres</li>
+        <li>Evitar contenido ofensivo</li>
+        <li>Recuerda que tu madre y/o abuelita podría leerla</li>
+        <li>La más votada del día se puede convertir en "La pregunta del día"</li>
+
+
+    </ul>
+
+    <br/>
+
+    <div class="row">
+        <div class="span4 well" style="padding-bottom:0">
+            <form accept-charset="UTF-8" action="" method="POST">
+                
+                <textarea class="form-control" id="new_message" name="new_message"
+                placeholder="Escribe tu pregunta" rows="3"></textarea>
+
+                <h6 class="pull-right" id="counter">320 carácteres disponibles</h6>
+                <br/>
+
+                <p><button class="btn btn-info" type="submit">Envíanos tu pregunta</button></p>
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript">
+
+$(function() {
+    $(".counted").charCounter(320,{container: "#counter"});
+});
+</script>
+
+
+<ul class="nav nav-tabs">
+  <li><a href="#" data-toggle="tab">Preguntas Destacadas</a></li>
+  <li class="active" data-toggle="tab"><a href="#">Preguntas propuestas<span class="badge">1</span></a></li>
+</ul>
+
+    <div class="row">
+        <div class="panel panel-default widget">
+            
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div class="mic-info">
+                                        By: <a href="#">Gonzalo Afa</a> on 13 May 2014, at 7:24pm
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    ¿Que te parece que la bancada de la alianza (RN y la UDI) no haya asistido a la discusión sobre la reforma tributaria, y que a su vez, hayan dejado carteles haciendo alusión a los posibles efectos de esta?
+                                </div>
+                                <div class="action">
+                                    
+                                    <button type="button" class="btn btn-success btn-xs" title="Aprobar">
+                                        <span class="glyphicon glyphicon-thumbs-up">10</span>
+                                    </button>
+
+                                    <button type="button" class="btn btn-info btn-xs" title="Twitter">
+                                        <span class="fa fa-twitter fa-fw"></span> Twitter
+                                    </button>
+                                    
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+         
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</body>
+</html>
+
