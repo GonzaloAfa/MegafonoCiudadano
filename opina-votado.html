@@ -3,20 +3,74 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Propón tu "Pregunta del día"</title>
+    <title>Pregunta del día</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="css/comment.css" rel="stylesheet" id="comment-css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/count.js"></script>
     
 </head>
 <body>
 
+ <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-bullhorn fa"></i> Megáfono ciudadano</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="listado.html">  <i class="fa fa-info fa-fw"></i> Infórmate</a></li>
+                    <li><a href="opina.html">   <i class="fa fa-comments-o fa-fw"></i> Opina</a></li>
+                    <li><a href="propon.html"> <i class="fa fa-pencil-square-o fa-fw"></i>Propón</a></li>
+                    <li><a href="login.html">   <i class="fa fa-user fa-fw"></i>Ingresar</a></li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<br/>
+<br/>
+
 <div class="container">
 
-<div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+<div class="col-xs-12 col-sm-3 sidebar-offcanvas">
+
+    <div class="text-center">
+        <h4>Pregunta propuesta por</h4>
+        <br/>
+        <img src="img/GonzaloAfa.jpg" name="aboutme" width="140"  border="0" class="img-circle"></a>
+        <h3 class="media-heading"><a href="user.html">Gonzalo Afa</a> <br/>
+            <small> Estudiante</small></h3>
+    </div>
+    <div class="text-center">
+        <button type="button" class="btn btn-primary btn-xs"><i class="fa fa-facebook"></i> Facebook</button>
+        <button type="button" class="btn btn-info btn-xs"><i class="fa fa-twitter"></i> Twitter</button>
+        <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-google-plus"></i> Google+</button>
+    </div>
+    <div class="text-center">
+        <br/>
+        <button class="btn btn-success btn-xs"><i class="fa fa-plus"></i> Seguir</button>
+    </div>
+
+    <hr>
+    <div class="text-center">        
+            Bachiller / Estudiante inJenieria en Computación - UChile / Apasionado por la fotografía / Presi @CaDCC 2013 / Fundador de @VotariasXEllos y @MovilizateChile
+    </div>
+    <br/>
 
 
 </div>
@@ -25,68 +79,49 @@
 
 <div class="col-xs-12 col-sm-9">
 
-    <div>
- 
 
-        <h1 class="text-center">Propone tu "Pregunta del día"</h1>
+    <div class="col-xs-12 col-sm-6 col-md-6 text-left">
+        <strong>Categoría: </strong>
+        <span class="label label-default">Educación</span>
+        <span class="label label-default">Ética y Transparencia</span>
     </div>
-    Reglas:
-    <ul>
-        <li>Tu pregunta debe ser de máximo 320 caracteres</li>
-        <li>No debe contener contenido ofensivo</li>
-        <li>La más votada del día se puede convertir en "La pregunta del día"</li>
 
-    </ul>
+    <div class="col-xs-12 col-sm-6 col-md-6 text-right">
+        <strong>Compartir: </strong>
+        <button type="button" class="btn btn-primary btn-xs"><i class="fa fa-facebook"></i> Facebook</button>
+        <button type="button" class="btn btn-info btn-xs"><i class="fa fa-twitter"></i> Twitter</button>
+        <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-google-plus"></i> Google+</button>
+    </div>
+    <hr>
 
+
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <h1 class="text-center">¿Qué te parece que el diputado <a href="perfil.html">Gabriel Boric</a> haya abierto un preuniversitario gratuito en Magallanes, el cual será financiando por él mismo?</h1>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <button type="button" class="btn btn-default"><strong>10</strong> Me molesta <i class="fa fa-frown-o"></i></button>
+        <button type="button" class="btn btn-default"><strong>10</strong> Me es irrelevante <i class="fa fa-meh-o"></i></button>
+        <button type="button" class="btn btn-default"><strong>10</strong> Me gusta <i class="fa fa-smile-o"></i></button>        
+        <hr>
+    </div>
+
+     <form accept-charset="UTF-8" action="" method="POST">
+            <textarea class="form-control" id="new_message" name="new_message" placeholder="Escribe tu opinión" rows="3"></textarea>
+            <h6 class="pull-right" id="counter">320 carácteres disponibles</h6>
+            <br/>
+            <p><button class="btn btn-info" type="submit">Envía tu opinión</button></p> 
+    </form>
     <br/>
 
-    <div class="row">
-        <div class="span4 well" style="padding-bottom:0">
-            <form accept-charset="UTF-8" action="" method="POST">
-
-                
-                <textarea class="form-control" id="new_message" name="new_message"
-                placeholder="Escribe tu opinión" rows="3"></textarea>
-                    
-                <h6 class="pull-right" id="counter">320 carácteres disponibles</h6>
-                                <textarea class="form-control" id="new_message" name="new_message"
-                placeholder="Escribe tu opinión" rows="3"></textarea>
-
-                <br/>
-
-                <p><button class="btn btn-info" type="submit">Envianos tu pregunta</button></p>
-            </form>
-        </div>
-    </div>
-
-<script type="text/javascript">
-
-$(function() {
-    $(".counted").charCounter(320,{container: "#counter"});
-});
-</script>
+   
 
 
 <ul class="nav nav-tabs">
-  <li><a href="#" data-toggle="tab">Preguntas Destacados</a></li>
-  <li class="active" data-toggle="tab"><a href="#">Preguntas propuestas<span class="badge">42</span></a></li>
+  <li><a href="#" data-toggle="tab">Opiniones Destacados</a></li>
+  <li class="active" data-toggle="tab"><a href="#">Opiniones recientes <span class="badge">42</span></a></li>
 </ul>
-
-<script type="text/javascript">
-
-    $('#myTab a').click(function (e) {
-      e.preventDefault()
-      $(this).tab('show')
-    })
-
-
-    $('#myTab a[href="#profile"]').tab('show') // Select tab by name
-    $('#myTab a:first').tab('show') // Select first tab
-    $('#myTab a:last').tab('show') // Select last tab
-    $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
-
-</script>
-
 
 
 
@@ -110,7 +145,7 @@ $(function() {
                                 </div>
                                 <div class="action">
                                     <button type="button" class="btn btn-success btn-xs" title="Aprobar">
-                                        <span class="glyphicon glyphicon-thumbs-up">10</span>
+                                        <span class="glyphicon glyphicon-thumbs-up"> 10</span>
                                     </button>
                                     <button type="button" class="btn btn-danger btn-xs" title="Desaprobar">
                                         <span class="glyphicon glyphicon-thumbs-down">2</span>
@@ -168,7 +203,7 @@ $(function() {
                         </div>
                     </li>
                 </ul>
-                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>
+                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> Seguir cargando</a>
             </div>
         </div>
     </div>
